@@ -44,7 +44,7 @@ static void render_text_themed(
 	struct color color = theme->foreground_color;
 	cairo_set_source_rgba(cr, color.r, color.g, color.b, color.a);
 
-	pango_layout_set_text(layout, text, -1);
+	pango_layout_set_markup(layout, text, -1);
 	pango_cairo_update_layout(cr, layout);
 	pango_cairo_show_layout(cr, layout);
 
